@@ -191,10 +191,11 @@ body {
 .project {
     width: 350px;
     max-width: 95%;
-    background-color: #b3349d;
+    background-color: #b90099;
     color: #fff;
     box-shadow: 0px -5px 20Px 0px rgb(0 0 0 / 35%);
     padding: 20px;
+    border-radius: 5px;
 }
 .projectPicture {
     background-color: var(--color-white);
