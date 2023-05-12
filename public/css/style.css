@@ -266,12 +266,12 @@ body {
     #projectContainer {
         margin-top: 200px;
     }
-    #headerBackground, #mainContentContainer, #skillsBackground {
-        padding: 15px !important;
-    }
 }
 @media screen and (max-width: 810px) {
     #skillsTab {
         width: 400px;
+    }
+    .project {
+        width: 300px;
     }
 }
