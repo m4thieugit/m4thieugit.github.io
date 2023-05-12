@@ -256,7 +256,6 @@ body {
     #headerContentContainer {
         z-index: 2;
         max-width: 95%;
-        margin: 10px;
     }
     #headerPicture .headerPicture { margin-right: unset; }
     #headerContentContainer, #headerlistContent {
