@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -323,10 +324,9 @@
                     document.getElementById('skillsContentContainer').classList.add('active');
                 }
                 window.addEventListener('scroll', () => {
-                    let scrollTop = document.body.scrollTop;
+                    let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
                     let height = (document.body.scrollHeight - document.body.clientHeight);
                     let scrolled = (scrollTop / height) * 100;
-                    console.log(height)
                     document.getElementById('progressBar').style.width = scrolled + '%';
                     if (scrollTop > 1200) {
                         revealSkills();
