@@ -32,6 +32,11 @@ body {
     background-blend-mode: soft-light, screen, darken, normal;
     z-index: 1;
 }
+#particles-js {
+    height: 400px;
+    display: inline-block;
+    width: 100%;
+}
 #headerContentContainer {
     position: relative;
     padding: 25px;
