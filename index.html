@@ -329,11 +329,14 @@
                     let height = (document.body.scrollHeight - document.body.clientHeight);
                     let scrolled = (scrollTop / height) * 100;
                     document.getElementById('progressBar').style.width = scrolled + '%';
-                    if (scrollTop > 1200) {
+                    if (scrollTop > document.getElementById('projectContainer').clientHeight) {
                         revealSkills();
                     }
                 });
                 revealProject();
+                if ((document.body.scrollTop || document.documentElement.scrollTop) > (document.getElementById('skillsContentContainer').clientHeight)) {
+                    revealSkills();
+                }
             });
         </script>
     </body>
