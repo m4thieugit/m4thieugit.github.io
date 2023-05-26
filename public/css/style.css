@@ -347,4 +347,7 @@ body {
     .project {
         width: 300px;
     }
+    #skillsContentContainer {
+        max-width: 95%;
+    }
 }
