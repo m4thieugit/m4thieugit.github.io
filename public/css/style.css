@@ -224,6 +224,7 @@ body {
     padding: 20px;
     border-radius: 5px;
 }
+.projects:not(.hackathons) .project { background-color: #2b99c5; }
 .projectPrize { position: absolute; }
 .projectPrize-1 {
     top: -30px;
