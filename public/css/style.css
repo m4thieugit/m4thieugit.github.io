@@ -118,7 +118,7 @@ body {
     text-decoration: none;
     text-shadow: 0px 0px 5px var(--color-black);
     box-shadow: 0px -10px 20px 10px rgb(0 0 0 / 10%);
-    border: 2.5px solid #98d7ff;
+    border: 2.5px solid var(--color-white);
 }
 .headerLink:hover {
     transform: scale(1.1);
@@ -127,7 +127,7 @@ body {
 .headerLink a:hover {
     background: rgb(39,173,162);
     background: linear-gradient(150deg, rgba(39,173,162,1) 0%,  rgba(9,9,121,1) 43%, rgba(0,212,255,1) 100%);
-    border: 2.5px solid #98d7ff;
+    border: 2.5px solid var(--color-white);
 }
 .contactLink { animation: hearbeat .5s infinite alternate; }
 #scrollIndicationContainer {
@@ -311,4 +311,12 @@ body {
     #skillsContentContainer { max-width: 95%; }
     .headerLink a { width: 150px; }
     .contactLink { animation: unset; }
+    #headerListLinks {
+        display: flex;
+        width: max-content;
+        position: fixed;
+        right: -70px;
+        bottom: 150px;
+        transform: rotate(270deg);
+    }
 }
