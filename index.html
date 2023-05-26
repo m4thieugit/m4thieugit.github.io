@@ -25,9 +25,6 @@
                     <div id="headerDescription">
                         <p class="description">“ Passionné depuis tout petit par l'informatique, mon objectif est de confirmer mon profil de développeur fullstack au sein de votre entreprise. ”</p>
                     </div>
-                </div>
-                <div id="headerBackground">
-                    <div id="particles-js"></div>
                     <div id="headerListLinksContainer">
                         <div id="headerListLinks">
                             <div class="headerLink contactLink">
@@ -36,19 +33,28 @@
                         </div>
                     </div>
                 </div>
+                <div id="headerBackground">
+                    <div id="scrollIndicationContainer">
+                        <img src="public/img/icons/scroll-down.png" alt="Scroll" />
+                    </div>
+                    <div id="particles-js"></div>
+                </div>
             </div>
         </header>
         <main>
             <div id="mainContainer">
                 <div id="mainContentContainer">
                     <div id="projectContainer">
-                        <div id="projectTitle">
-                            <h1 class="title">Mes projets réalisés</h1>
+                        <div class="projectTitle">
+                            <h1 class="title">Mes hackathons</h1>
                         </div>
-                        <div id="projectList">
+                        <div class="projectList">
                             <ul class="projects">
                                 <li class="projectContentContainer">
                                     <div class="project">
+                                        <div class="projectPrize projectPrize-2">
+                                            <img src="public/img/icons/favorite-heart.png" alt="Coup de coeur du jury" />
+                                        </div>
                                         <div class="projectPicture">
                                             <img src="public/img/projects/Vidmizer.png" width="250px" alt="Hackathon - Vidmizer" />
                                         </div>
@@ -73,6 +79,9 @@
                                 </li>
                                 <li class="projectContentContainer">
                                     <div class="project">
+                                        <div class="projectPrize projectPrize-1">
+                                            <img src="public/img/icons/medal.png" alt="Prix du meilleur projet" />
+                                        </div>
                                         <div class="projectPicture">
                                             <img src="public/img/projects/Qwant.png" width="100px" alt="Hackathon - Qwant" />
                                             <p class="pictureDescription">(Image d'illustration pour clause de confidentialité)</p>
@@ -98,6 +107,9 @@
                                 </li>
                                 <li class="projectContentContainer">
                                     <div class="project">
+                                        <div class="projectPrize projectPrize-1">
+                                            <img src="public/img/icons/medal.png" alt="Prix du meilleur projet" />
+                                        </div>
                                         <div class="projectPicture">
                                             <img src="public/img/projects/Python.png" width="100px" alt="Hackathon - Minautor" />
                                             <p class="pictureDescription">(Image d'illustration car photo indisponible)</p>
@@ -116,6 +128,35 @@
                                         </div>
                                     </div>
                                 </li>
+                            </ul>
+                        </div>
+                        <div class="projectTitle">
+                            <h1 class="title">Mes projets réalisés</h1>
+                        </div>
+                        <div class="projectList">
+                            <ul class="projects">
+                                <li class="projectContentContainer">
+                                    <div class="project">
+                                        <div class="projectPicture">
+                                            <img src="public/img/projects/Hangman.png" width="250px" alt="Knight Virus" />
+                                        </div>
+                                        <div class="projectTitle">
+                                            <h2>Hangman</h2>
+                                            <h3>Projet personnel</h3>
+                                        </div>
+                                        <div class="projectDescription">
+                                            <p>
+                                                Réalisation d'un mini-jeu "Jeu du pendu" en <strong>HTML</strong>, <strong>CSS</strong> et <strong>Javascript</strong>.
+                                                <br/>
+                                                <br/>
+                                                Quand on perd ou gagne, le jeu nous affiche la définition du mot trouvé.
+                                            </p>
+                                        </div>
+                                        <div class="projectDate">
+                                            <h4>2020</h4>
+                                        </div>
+                                    </div>
+                                </li>
                                 <li class="projectContentContainer">
                                     <div class="project">
                                         <div class="projectPicture">
@@ -127,9 +168,10 @@
                                         </div>
                                         <div class="projectDescription">
                                             <p>
-                                                Réalisation d'une intelligence artificielle capable de communiquer et rechercher des informations sur le web
+                                                Réalisation d'une intelligence artificielle capable de communiquer et rechercher des informations sur le web.
                                                 <br/>
-                                                Projet développé avec <strong>Node.Js</strong>
+                                                <br/>
+                                                Projet développé avec <strong>Node.Js</strong>.
                                             </p>
                                         </div>
                                         <div class="projectDate">
@@ -147,7 +189,7 @@
                                             <h3>Projet personnel</h3>
                                         </div>
                                         <div class="projectDescription">
-                                            <p>Réalisation d'un jeu vidéo 2D en <strong>Javascript</strong> à l'aide d'<strong>ElectronJS</strong></p>
+                                            <p>Réalisation d'un jeu vidéo 2D en <strong>Javascript</strong> à l'aide d'<strong>ElectronJS</strong>.</p>
                                         </div>
                                         <div class="projectDate">
                                             <h4>2021</h4>
@@ -182,7 +224,15 @@
                                             <p>HTML</p>
                                         </td>
                                         <td>
-                                            <p>Avancé</p>
+                                            <div class="starsContainer">
+                                                <div class="star">
+                                                    <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                                    <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                                    <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                                    <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                                    <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -190,23 +240,11 @@
                                             <p>CSS</p>
                                         </td>
                                         <td>
-                                            <p>Avancé</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>PHP</p>
-                                        </td>
-                                        <td>
-                                            <p>Intermédiaire</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Laravel</p>
-                                        </td>
-                                        <td>
-                                            <p>Intermédiaire</p>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -214,7 +252,11 @@
                                             <p>JavaScript</p>
                                         </td>
                                         <td>
-                                            <p>Avancé</p>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -222,7 +264,11 @@
                                             <p>Node.js</p>
                                         </td>
                                         <td>
-                                            <p>Avancé</p>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -230,7 +276,31 @@
                                             <p>ExpressJS</p>
                                         </td>
                                         <td>
-                                            <p>Avancé</p>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>PHP</p>
+                                        </td>
+                                        <td>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Laravel</p>
+                                        </td>
+                                        <td>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -238,7 +308,9 @@
                                             <p>React Native</p>
                                         </td>
                                         <td>
-                                            <p>Intermédiaire</p>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -246,15 +318,9 @@
                                             <p>React</p>
                                         </td>
                                         <td>
-                                            <p>Intermédiaire</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>CoffeeScript</p>
-                                        </td>
-                                        <td>
-                                            <p>Intermédiaire</p>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -262,7 +328,9 @@
                                             <p>Java</p>
                                         </td>
                                         <td>
-                                            <p>Intermédiaire</p>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -270,7 +338,8 @@
                                             <p>C</p>
                                         </td>
                                         <td>
-                                            <p>Intermédiaire</p>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -278,7 +347,9 @@
                                             <p>Bash</p>
                                         </td>
                                         <td>
-                                            <p>Intermédiaire</p>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -286,7 +357,9 @@
                                             <p>Python</p>
                                         </td>
                                         <td>
-                                            <p>Intermédiaire</p>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -294,7 +367,9 @@
                                             <p>SQL</p>
                                         </td>
                                         <td>
-                                            <p>Intermédiaire</p>
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
+                                            <img src="public/img/icons/star.png" width="20px" alt="Star" />
                                         </td>
                                     </tr>
                                 </tbody>
@@ -329,11 +404,16 @@
                     let height = (document.documentElement.scrollHeight - document.documentElement.clientHeight);
                     let scrolled = (scrollTop / height) * 100;
                     document.getElementById('progressBar').style.width = scrolled + '%';
+                    if (scrollTop > document.getElementById('headerContentContainer').clientHeight) {
+                        revealProject();
+                    }
                     if (scrollTop > document.getElementById('projectContainer').clientHeight) {
                         revealSkills();
                     }
                 });
-                revealProject();
+                if ((document.body.scrollTop || document.documentElement.scrollTop) >= (document.getElementById('projectContainer').clientHeight)) {
+                    revealProject();
+                }
                 if ((document.body.scrollTop || document.documentElement.scrollTop) > (document.getElementById('skillsContentContainer').clientHeight)) {
                     revealSkills();
                 }
