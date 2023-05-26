@@ -18,7 +18,7 @@ body {
 }
 #headerContainer {
     width: 100%;
-    min-height: 600px;
+    min-height: 100vh;
     margin: 0;
     display: flex;
 }
@@ -27,13 +27,13 @@ body {
     top : 0;
     left: 0;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     background: linear-gradient(235deg, #FFFFFF 0%, #000F25 100%), linear-gradient(180deg, #6100FF 0%, #000000 100%), linear-gradient(235deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%), linear-gradient(125deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%);
     background-blend-mode: soft-light, screen, darken, normal;
     z-index: 1;
 }
 #particles-js {
-    height: 400px;
+    height: 100vh;
     display: inline-block;
     width: 100%;
 }
@@ -41,7 +41,8 @@ body {
     position: relative;
     padding: 25px;
     margin: auto;
-    width: 750px;
+    max-width: 90%;
+    width: 760px;
     text-align: center;
     background-color: #0000005e;
     border-radius: 10px;
@@ -53,10 +54,9 @@ body {
 }
 #headerPicture .headerPicture {
     transition: all .3s ease-in-out;
-    animation: pictureFloating 6s ease-in-out infinite;
-
+    animation: pictureFloatingUp 6s ease-in-out infinite;
 }
-@keyframes pictureFloating {
+@keyframes pictureFloatingUp {
     0% {
         transform: translatey(0px);
     }
@@ -81,7 +81,7 @@ body {
     margin-right: 25px;
 }
 #headerDescription .description {
-    font-size: 18px;
+    font-size: 22px;
     color: var(--color-white);
 }
 #progressBar {
@@ -94,14 +94,14 @@ body {
 }
 #headerListLinksContainer, #headerListLinks {
     display: flex;
-    margin: -4px auto auto auto;
+    margin: auto;
+    z-index: 11;
 }
 #headerListLinks {
     display: flex;
     width: max-content;
-    position: absolute;
-    left: 0;
-    right: 0;
+    position: fixed;
+    right: 30px;
     margin-left: auto;
     margin-right: auto;
     bottom: 0;
@@ -110,14 +110,18 @@ body {
     transition: all .3s ease-in-out;
 }
 .headerLink a {
-    color: var(--color-white);
     padding: 10px;
+    display: block;
+    width: 200px;
+    color: var(--color-white);
     background: rgb(39,173,162);
     background: linear-gradient(150deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 43%, rgba(39,173,162,1) 100%);
     border-radius: 2px;
     text-transform: uppercase;
     text-decoration: none;
-    text-shadow: 0px -2px 20px var(--color-black);
+    text-shadow: 0px 0px 10px var(--color-black);
+    box-shadow: 0px -10px 20px 10px rgb(0 0 0 / 10%);
+    border: 1px solid #98d7ff;
     z-index: 3;
 }
 .headerLink:hover {
@@ -127,9 +131,32 @@ body {
 .headerLink a:hover {
     background: rgb(39,173,162);
     background: linear-gradient(150deg, rgba(39,173,162,1) 0%,  rgba(9,9,121,1) 43%, rgba(0,212,255,1) 100%);
+    border: unset;
 }
 .contactLink {
     animation: hearbeat .5s infinite alternate;
+}
+#scrollIndicationContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    text-align: center;
+}
+#scrollIndicationContainer img {
+    width: 70px;
+    animation: pictureFloatingDown 3s ease-in-out infinite;
+}
+@keyframes pictureFloatingDown {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(10px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
 }
 @keyframes hearbeat {
     to { transform: scale(1.05); }
@@ -163,7 +190,7 @@ body {
       transform: translateX(0);
     }
 }
-#projectList {
+.projectList {
     margin: 50px auto 50px auto;
     width: 1200px;
     padding: 15px;
@@ -185,9 +212,12 @@ body {
 #projectContainer {
     margin-top: 100px;
 }
-#projectTitle .title, #skillsTitle .title, #endProjects h2, #footerContainer .title {
+.projectTitle .title, #skillsTitle .title, #endProjects h2, #footerContainer .title {
     color: #fff;
     text-shadow: 0px 0px 20px rgb(0 0 0);
+}
+#endProjects h2 {
+    font-style: italic;
 }
 .projects {
     list-style: none;
@@ -204,17 +234,38 @@ body {
     transform: scale(1.01);
 }
 .project {
+    position: relative;
     width: 350px;
     max-width: 95%;
     background-color: #b90099;
     color: #fff;
-    box-shadow: 0px -5px 20Px 0px rgb(0 0 0 / 35%);
+    box-shadow: 0px -5px 20px 0px rgb(0 0 0 / 35%);
     padding: 20px;
     border-radius: 5px;
 }
+.projectPrize {
+    position: absolute;
+}
+.projectPrize-1 {
+    top: -30px;
+    left: -35px;
+}
+.projectPrize-2 {
+    top: -45px;
+    left: -45px;
+}
+.projectPrize img {
+    max-width: 100px;
+}
+.projectPrize-1 img {
+    width: 80px;
+}
+.projectPrize-2 img {
+    width: 90px;
+}
 .projectPicture {
     background-color: var(--color-white);
-    box-shadow: 0px -5px 20Px 0px rgb(0 0 0 / 10%);
+    box-shadow: 0px -5px 20px 0px rgb(0 0 0 / 10%);
 }
 .projectPicture img {
     margin: 15px;
@@ -252,12 +303,15 @@ body {
     font-size: 20px;
 }
 #skillsTab thead tr, #skillsTab thead td {
-    background-color: #3c003e;
+    background-color: #ed00c1;
     color: var(--color-white);
+    box-shadow: 0px 0px 20px 0px rgb(50 50 50 / 22%);
+    border-radius: 50px 50px 0px 0px;
 }
 #skillsTab tbody tr, #skillsTab tbody td {
-    background-color: #ff6a82;
+    background-color: #b90099;
     color: var(--color-white);
+    box-shadow: 0px 0px 20px 0px rgb(50 50 50 / 22%);
 }
 #skillsBackground {
     position: absolute;
@@ -273,13 +327,12 @@ body {
     body { overflow-x: hidden; }
     #headerContentContainer {
         z-index: 2;
-        max-width: 95%;
+        max-width: 100%;
     }
     #headerPicture .headerPicture { margin-right: unset; }
     #headerContentContainer, #headerlistContent {
         display: block;
     }
-    #headerBackground { height: 600px; }
     #projectContainer {
         margin-top: 200px;
     }
