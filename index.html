@@ -53,13 +53,13 @@
                         </div>
                         <div class="projectList">
                             <ul class="projects">
-                                <li class="projectContentContainer">
+                                <li class="projectContentContainer" onclick="showProjectPicture(this);">
                                     <div class="project">
                                         <div class="projectPrize projectPrize-2">
                                             <img src="public/img/icons/favorite-heart.png" alt="Coup de coeur du jury" />
                                         </div>
                                         <div class="projectPicture">
-                                            <img src="public/img/projects/Vidmizer.png" width="250px" alt="Hackathon - Vidmizer" />
+                                            <img src="public/img/projects/Vidmizer.png" width="250px" alt="Hackathon - Vidmizer"/>
                                         </div>
                                         <div class="projectTitle">
                                             <h2>Hackathon - Vidmizer</h2>
@@ -80,13 +80,13 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="projectContentContainer">
+                               <li class="projectContentContainer" onclick="showProjectPicture(this);">
                                     <div class="project">
                                         <div class="projectPrize projectPrize-1">
                                             <img src="public/img/icons/medal.png" alt="Prix du meilleur projet" />
                                         </div>
                                         <div class="projectPicture">
-                                            <img src="public/img/projects/Qwant.png" width="100px" alt="Hackathon - Qwant" />
+                                            <img src="public/img/projects/Qwant.png" width="100px" alt="Hackathon - Qwant" onclick="showProjectPicture(this.src);" />
                                             <p class="pictureDescription">(Image d'illustration pour clause de confidentialité)</p>
                                         </div>
                                         <div class="projectTitle">
@@ -108,13 +108,13 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="projectContentContainer">
+                               <li class="projectContentContainer" onclick="showProjectPicture(this);">
                                     <div class="project">
                                         <div class="projectPrize projectPrize-1">
                                             <img src="public/img/icons/medal.png" alt="Prix du meilleur projet" />
                                         </div>
                                         <div class="projectPicture">
-                                            <img src="public/img/projects/Python.png" width="100px" alt="Hackathon - Minautor" />
+                                            <img src="public/img/projects/Python.png" width="100px" alt="Hackathon - Minautor" onclick="showProjectPicture(this.src);" />
                                             <p class="pictureDescription">(Image d'illustration car photo indisponible)</p>
                                         </div>
                                         <div class="projectTitle">
@@ -138,10 +138,10 @@
                         </div>
                         <div class="projectList">
                             <ul class="projects">
-                                <li class="projectContentContainer">
+                               <li class="projectContentContainer" onclick="showProjectPicture(this);">
                                     <div class="project">
                                         <div class="projectPicture">
-                                            <img src="public/img/projects/Hangman.png" width="250px" alt="Knight Virus" />
+                                            <img src="public/img/projects/Hangman.png" width="250px" alt="Knight Virus" onclick="showProjectPicture(this.src);" />
                                         </div>
                                         <div class="projectTitle">
                                             <h2>Hangman</h2>
@@ -160,10 +160,10 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="projectContentContainer">
+                               <li class="projectContentContainer" onclick="showProjectPicture(this);">
                                     <div class="project">
                                         <div class="projectPicture">
-                                            <img src="public/img/projects/Selene.png" width="250px" alt="Selene I.A." />
+                                            <img src="public/img/projects/Selene.png" width="250px" alt="Selene I.A." onclick="showProjectPicture(this.src);" />
                                         </div>
                                         <div class="projectTitle">
                                             <h2>Selene I.A.</h2>
@@ -182,10 +182,10 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="projectContentContainer">
+                               <li class="projectContentContainer" onclick="showProjectPicture(this);">
                                     <div class="project">
                                         <div class="projectPicture">
-                                            <img src="public/img/projects/Knight_Virus.png" width="250px" alt="Knight Virus" />
+                                            <img src="public/img/projects/Knight_Virus.png" width="250px" alt="Knight Virus" onclick="showProjectPicture(this.src);" />
                                         </div>
                                         <div class="projectTitle">
                                             <h2>Knight Virus</h2>
@@ -383,6 +383,17 @@
                     </div>
                 </div>
             </div>
+            <!-- Project picture preview -->
+            <div id="previewContainer" class="hidden" onclick="showWindow('previewContainer');">
+                <div id="previewContentContainer">
+                    <div id="previewImgContainer">
+                        <img id="previewImg" src="" alt="Preview" />
+                    </div>
+                    <div id="previewTitleContainer">
+                        <h1 id="imgTitle"></h1>
+                    </div>
+                </div>
+            </div>
         </main>
         <!-- Footer -->
         <footer>
@@ -397,29 +408,36 @@
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <script src="public/js/particle.min.js" type="text/javascript"></script>
         <script type="text/javascript" defer>
+            function showWindow(id) {
+                const window = document.getElementById(id);
+                if (!window) { return; }
+                if (window.classList.contains('hidden')) { window.classList.remove('hidden'); }
+                else { window.classList.add('hidden'); }
+            }
+            function showProjectPicture(el) {
+                let img = el.getElementsByTagName('img')[1] || el.getElementsByTagName('img')[0];
+                let title = el.getElementsByTagName('h2')[0];
+                const previewImg = document.getElementById('previewImg');
+                const imgTitle = document.getElementById('imgTitle');
+                previewImg.src = img.src;
+                imgTitle.innerText = title.innerText;
+                showWindow('previewContainer');
+            }
             window.addEventListener('DOMContentLoaded', () => {
-                function revealProject() {
-                    document.getElementById('projectContainer').classList.add('active');
-                }
-                function revealSkills() {
-                    document.getElementById('skillsContentContainer').classList.add('active');
-                }
+                function revealProject() { document.getElementById('projectContainer').classList.add('active'); }
+                function revealSkills() { document.getElementById('skillsContentContainer').classList.add('active'); }
                 window.addEventListener('scroll', () => {
                     let scrollTop = window.scrollY || document.body.scrollTop || document.documentElement.scrollTop;
                     let height = (document.documentElement.scrollHeight - document.documentElement.clientHeight);
                     let scrolled = (scrollTop / height) * 100;
                     document.getElementById('progressBar').style.width = scrolled + '%';
-                    if (scrollTop > document.getElementById('headerContentContainer').clientHeight) {
-                        revealProject();
-                    }
-                    if (scrollTop > document.getElementById('projectContainer').clientHeight) {
-                        revealSkills();
-                    }
+                    if (scrollTop > document.getElementById('headerContentContainer').clientHeight) { revealProject(); }
+                    if (scrollTop > document.getElementById('projectContainer').clientHeight) { revealSkills(); }
                 });
                 if ((document.body.scrollTop || document.documentElement.scrollTop) >= (document.getElementById('projectContainer').clientHeight)) {
                     revealProject();
                 }
-                if ((document.body.scrollTop || document.documentElement.scrollTop) > (document.getElementById('skillsContentContainer').clientHeight)) {
+                if ((document.body.scrollTop || document.documentElement.scrollTop) >= (document.getElementById('skillsContentContainer').clientHeight)) {
                     revealSkills();
                 }
             });
