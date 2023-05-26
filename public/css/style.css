@@ -138,7 +138,7 @@ body {
     text-align: center;
 }
 #scrollIndicationContainer img {
-    width: 50px;
+    width: 75px;
     animation: pictureFloatingDown 3s ease-in-out infinite;
 }
 /* Floating animation */
